@@ -67,3 +67,5 @@ weatherForecast.onload = function() {
     document.getElementById('r3c2').src = imagePath;
   }
 };
+
+loadWeather();
