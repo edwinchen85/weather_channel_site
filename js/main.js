@@ -39,5 +39,13 @@ weatherForecast.onload = function() {
     document.getElementById('r1c4').innerHTML = fObj.forecast.simpleforecast.forecastday[1].low.fahrenheit+"°";
     var imagePath = fObj.forecast.simpleforecast.forecastday[1].icon_url;
     document.getElementById('r1c2').src = imagePath;
+
+    // Day 2
+    document.getElementById('r2c1').innerHTML = fObj.forecast.simpleforecast.forecastday[2].date.weekday;
+    document.getElementById('r2c3').innerHTML = fObj.forecast.simpleforecast.forecastday[2].high.fahrenheit+"°";
+    document.getElementById('r2c4').innerHTML = fObj.forecast.simpleforecast.forecastday[2].low.fahrenheit+"°";
+    var imagePath = fObj.forecast.simpleforecast.forecastday[2].icon_url;
+    document.getElementById('r2c2').src = imagePath;
+
   }
 };
