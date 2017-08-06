@@ -7,11 +7,14 @@ var fObj;
 
 function loadWeather() {
 
-  weatherConditions.open('GET', 'http://api.wunderground.com/api/9885a4395f919785/conditions/q/84653.json', true);
+  var conditionsPath = 'http://api.wunderground.com/api/9885a4395f919785/conditions/q/84653.json';
+  var forecastPath = 'http://api.wunderground.com/api/9885a4395f919785/forecast/q/84653.json';
+
+  weatherConditions.open('GET', conditionsPath, true);
   weatherConditions.responseType = 'text';
   weatherConditions.send();
 
-  weatherForecast.open('GET', 'http://api.wunderground.com/api/9885a4395f919785/forecast/q/84653.json', true);
+  weatherForecast.open('GET', forecastPath, true);
   weatherForecast.responseType = 'text';
   weatherForecast.send();
 
