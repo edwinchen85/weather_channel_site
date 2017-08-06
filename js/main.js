@@ -7,8 +7,10 @@ var fObj;
 
 function loadWeather() {
 
-  var conditionsPath = 'http://api.wunderground.com/api/9885a4395f919785/conditions/q/84653.json';
-  var forecastPath = 'http://api.wunderground.com/api/9885a4395f919785/forecast/q/84653.json';
+  var zip = '84653';
+
+  var conditionsPath = 'http://api.wunderground.com/api/9885a4395f919785/conditions/q/'+ zip +'.json';
+  var forecastPath = 'http://api.wunderground.com/api/9885a4395f919785/forecast/q/'+ zip +'.json';
 
   weatherConditions.open('GET', conditionsPath, true);
   weatherConditions.responseType = 'text';
