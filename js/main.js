@@ -9,6 +9,8 @@ function loadWeather() {
 
   var zip = document.getElementById('zip').value;
 
+  if (zip === '') { zip = '84653'; }
+
   var conditionsPath = 'http://api.wunderground.com/api/9885a4395f919785/conditions/q/'+ zip +'.json';
   var forecastPath = 'http://api.wunderground.com/api/9885a4395f919785/forecast/q/'+ zip +'.json';
 
